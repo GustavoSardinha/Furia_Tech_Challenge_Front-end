@@ -1,0 +1,82 @@
+.Modal-Container{
+    position: fixed;
+    bottom: 3vh;    
+    right: 2vh;
+    z-index: 999;
+    width: 35vh;
+    height: 70vh;
+    border-radius: 2vh;
+    background-color: #FAF9F6;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+.Chat-Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 1vh 2vh 0vh;
+}
+.Message-Area {
+    height: 50vh;      
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #f0f0f0; 
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+  }
+.Header-Icon{
+    width: 3vh;
+    margin: 0 1vh;
+    padding: 0.5vh;
+    border-radius: 3px;
+}
+.Header-Icon:hover{
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ebe8e3;
+}
+.Message-bot{
+    background-color: #dadde4;
+    padding: 1.2vh;
+    border-radius: 1vh;
+    justify-content: start;
+    text-align: justify;
+}
+.Message-user{
+    background-color: #d4d3d3;
+    padding: 1.2vh;
+    border-radius: 1vh;
+    justify-content: start;
+    text-align: justify;
+}
+.Image-bot{
+    width: 5vh; 
+    height: 5vh;
+    background-image: url('../../img/FURIA_Esports_logo.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0vh 1vh;
+}
+.Chat-Title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    .Modal-Container{
+        bottom: 0vh;    
+        right: 0vh;
+        width: 100%;
+        height: 72vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+}

@@ -1,0 +1,32 @@
+.Button {
+    position: fixed;
+    bottom: 3vh;   
+    right: 3vh;    
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.918);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    height: 20px;
+    border-radius: 20px;
+    padding: 2vh 2.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    border: none;
+    
+  }
+.Button-text{
+    color: white;
+    margin: 0vh 1vh;
+    font-weight: bold;
+}
+.Button:hover{
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    background-color: #021622a6;
+    cursor: pointer;
+}
+.Button-img{
+    width: 3vh;
+    height: 3vh;
+}  

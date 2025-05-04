@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Mark W05 Medium";
+    src: url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.eot");
+    src: url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b621d1ffb46493164fd62fb7a83ab0ff.svg#Mark W05 Medium")format("svg");
+  }
+
+.tabs {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    margin-bottom: -1px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
+    font-family: "Mark W05 Medium";
+    margin: 0 1vh;
+  }
+  
+  .tab-button:hover {
+    color: #534747;
+    border-color: #534747;
+  }
+  
+  .tab-button.active {
+    color: black;
+    border-color: black;
+  }
+  
+  .tab-content {
+    margin-top: 16px;
+  }
+  

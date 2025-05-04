@@ -1,0 +1,49 @@
+
+.Chat-Container{
+    display: flex;
+    align-items: center;            
+    height: 6vh;                     
+    border: 1px solid #ccc;           
+    background-color: white;
+    margin: 1vh;
+    border-radius: 10px;
+}
+.Input{
+    flex: 1;                         
+    height: 80%;                    
+    padding: 0 1rem;                
+    font-size: 1rem;
+    border: none;                 
+    background: transparent;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;  
+}
+.Input:focus{
+    outline: none; 
+}
+.Chat-Container:hover{
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    background-color: #faf9f8;
+}
+.Button-Input{
+    height: 80%;                     
+    width: 3rem;                   
+    margin-right: 0.5rem;
+    border: none;                    
+    background-color: #f5f5f5;      
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;  
+}
+.Button-Input:hover{
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    background-color: #cecece;
+}
+.Button-Icon{
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: #888;     
+}
