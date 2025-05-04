@@ -5,10 +5,10 @@
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.918);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    width: max-content;
-    height: 20px;
+    width: 250px;
+    height: 35px;
     border-radius: 20px;
-    padding: 2vh 2.5vh;
+    padding: 25px 20px;
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -20,6 +20,7 @@
     color: white;
     margin: 0vh 1vh;
     font-weight: bold;
+    font-size: 16px;
 }
 .Button:hover{
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
@@ -27,6 +28,6 @@
     cursor: pointer;
 }
 .Button-img{
-    width: 3vh;
-    height: 3vh;
+    width: 40px;
+    height: 40px;
 }  

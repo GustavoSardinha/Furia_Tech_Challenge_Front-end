@@ -1,82 +1,132 @@
-.Modal-Container{
+/* Root-level variables for scaling */
+:root {
+    --modal-min-width: 280px;
+    --modal-max-width: 400px;
+    --modal-min-height: 400px;
+    --modal-max-height: 600px;
+    --edge-gap: 2vh;
+    --container-bg: #FAF9F6;
+    --shadow-dark: rgba(0, 0, 0, 0.7);
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --bot-msg-bg: #dadde4;
+    --user-msg-bg: #d4d3d3;
+    --area-bg: #f0f0f0;
+  }
+  
+  .Modal-Container {
     position: fixed;
-    bottom: 3vh;    
-    right: 2vh;
+    bottom: var(--edge-gap);
+    right: var(--edge-gap);
     z-index: 999;
-    width: 35vh;
-    height: 70vh;
-    border-radius: 2vh;
-    background-color: #FAF9F6;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  
+    /* Fluid dimensions with min/max constraints */
+    width: clamp(var(--modal-min-width), 25vw, var(--modal-max-width));
+    height: clamp(var(--modal-min-height), 70vh, var(--modal-max-height));
+  
+    border-radius: 1.5vh;
+    background-color: var(--container-bg);
+    box-shadow: 0 6px 16px var(--shadow-dark);
     box-sizing: border-box;
-}
-.Chat-Header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Header and Title */
+  .Chat-Header {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1vh 2vh;
     box-sizing: border-box;
-    margin: 1vh 2vh 0vh;
-}
-.Message-Area {
-    height: 50vh;      
+    background-color: transparent;
+  }
+  .Chat-Title {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+  }
+  .Header-Icon {
+    width: 25px;
+    height: 25px;
+    padding: 0.5vh;
+    margin: 1vh;
+    border-radius: 4px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .Header-Icon:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 16px var(--shadow-light);
+    background-color: #ebe8e3;
+  }
+  
+  /* Message area grows to fill remaining space */
+  .Message-Area {
+    flex: 1;
     overflow-y: auto;
-    overflow-x: hidden;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: #f0f0f0; 
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
-
+    background-color: var(--area-bg);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-.Header-Icon{
-    width: 3vh;
-    margin: 0 1vh;
-    padding: 0.5vh;
-    border-radius: 3px;
-}
-.Header-Icon:hover{
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    background-color: #ebe8e3;
-}
-.Message-bot{
-    background-color: #dadde4;
-    padding: 1.2vh;
-    border-radius: 1vh;
-    justify-content: start;
+  
+  /* Message bubbles */
+  .Message-bot,
+  .Message-user {
+    max-width: 90%;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
     text-align: justify;
-}
-.Message-user{
-    background-color: #d4d3d3;
-    padding: 1.2vh;
-    border-radius: 1vh;
-    justify-content: start;
-    text-align: justify;
-}
-.Image-bot{
-    width: 5vh; 
-    height: 5vh;
+    font-size: medium;
+    word-wrap: break-word;
+  }
+  .Message-bot {
+    background-color: var(--bot-msg-bg);
+    align-self: flex-start;
+  }
+  .Message-user {
+    background-color: var(--user-msg-bg);
+    align-self: flex-end;
+  }
+  
+  /* Bot avatar in messages */
+  .Image-bot {
+    width: 50px;
+    height: 50px;
     background-image: url('../../img/FURIA_Esports_logo.png');
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0vh 1vh;
-}
-.Chat-Title{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-@media only screen and (max-width: 600px) {
-    .Modal-Container{
-        bottom: 0vh;    
-        right: 0vh;
-        width: 100%;
-        height: 72vh;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+    margin-right: 1vh;
+    flex-shrink: 0;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 900px) {
+    .Modal-Container {
+      bottom: 1vh;
+      right: 1vw;
+      width: clamp(260px, 35vw, 350px);
+      height: clamp(50vh, 60vh, 75vh);
+      border-radius: 1vh;
     }
-
-}
+  }
+  
+  @media (max-width: 600px) {
+    .Modal-Container {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 70vh;
+      border-radius: 0 0 1.5vh 1.5vh;
+    }
+    .Chat-Header {
+      padding: 1vh;
+    }
+    .Message-Area {
+      padding: 0.5rem;
+    }
+  }
+  
