@@ -87,7 +87,7 @@ export default function Resumo(){
       <p className="List-Info"><strong>Pontos:</strong> <span className="value">1211</span></p>
       <p className="List-Info"><strong>Ranking mundial:</strong> <span className="value">#17</span></p>
       <p className="List-Info"><strong>Ranking brasileiro:</strong> <span className="value">#2</span></p>
-      <p className="List-Info"><strong>Média de idade dos jogadores:</strong> <span className="value">26.2</span></p>
+      <p className="List-Info"><strong>Média de idade:</strong> <span className="value">26.2</span></p>
     </div>
     <h3 className='Subtitle'>Line-up Titular</h3>
     <div className="Card-Div">
