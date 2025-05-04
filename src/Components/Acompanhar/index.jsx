@@ -20,7 +20,7 @@ export default function Acompanhar() {
       api.get("/api/livestatus")
         .then(res => setLiveData(res.data))
         .catch(err => console.error("Erro ao buscar dados:", err));
-    }, 1000);
+    }, 500);
   
     return () => clearInterval(interval);
   }, []);
