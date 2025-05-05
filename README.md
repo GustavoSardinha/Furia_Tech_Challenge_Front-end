@@ -78,5 +78,5 @@ Este projeto demonstra integração entre **frontend em React** e **backend em N
    npm start
    ```
 ## Agradecimentos 🙏🤝🚀
-  Agradeço à equipe de recrutamento da FURIA pela oportunidade de participar deste desafio técnico que proporcionaram um ambiente desafiador e motivador. Estou ansioso para futuras oportunidades e para continuar aprimorando minhas habilidades na área. 
+     Agradeço à equipe de recrutamento da FURIA pela oportunidade de participar deste desafio técnico que proporcionaram um ambiente desafiador e motivador. Estou ansioso para futuras oportunidades e para continuar aprimorando minhas habilidades na área. 
  
